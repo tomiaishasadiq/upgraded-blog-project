@@ -96,7 +96,7 @@ with app.app_context():
 
 
 
-# TODO: Configure Flask-Login
+#Configure Flask-Login
 login_manager = LoginManager()
 login_manager.init_app(app)
 
@@ -115,7 +115,7 @@ def admin_only(f):
     return decorated_function
 
 
-# TODO: Use Werkzeug to hash the user's password when creating a new user.
+# Use Werkzeug to hash the user's password when creating a new user.
 
 # Register new users into the User database
 @app.route('/register', methods=["GET", "POST"])
@@ -273,4 +273,4 @@ def send_email(name, email, phone, message):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5002)
+    app.run(debug=False, port=5002)
